@@ -1,12 +1,16 @@
 import './App.css'
 
+import { RecoilRoot } from 'recoil'
+import { RouterProvider } from 'react-router-dom'
+import Routes from './Routes'
+
 function App() {
 
   return (
     <>
-      <div className='w-100 h-100 bg-amber-200'>
-      </div>
-      
+      <RecoilRoot>
+        <RouterProvider router={Routes}/>
+      </RecoilRoot>
     </>
   )
 }
