@@ -24,10 +24,12 @@ export default function TodoForm(){
             setAlertText(true)
         }
 
-
         setTodoList((prev)=>[
             ...prev,
-            todoInput
+            {id: Date.now(),
+                text:todoInput,
+                complete:false
+            }
         ])
 
         setTodoInput('')
