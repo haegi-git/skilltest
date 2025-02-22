@@ -1,13 +1,12 @@
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 
-export default function Todo(){
-    return(
-        <>
-            <TodoList/>
+export default function Todo() {
+   return (
+      <>
+         <TodoList />
 
-            <TodoForm/>
-
-        </>
-    )
+         <TodoForm />
+      </>
+   );
 }
