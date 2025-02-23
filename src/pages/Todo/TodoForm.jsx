@@ -23,11 +23,20 @@ export default function TodoForm() {
       if (!todoInput.trim()) {
          setAlertText(true);
       }
-      axios.post("http://localhost:3000/todo", {
-         todo: todoInput,
-         complete: false,
-         priority: 0,
-      });
+      axios
+         .post("http://localhost:3000/todo", {
+            todo: todoInput,
+            complete: false,
+            priority: 0,
+            userId: sessionStorage.getItem("userId"),
+         })
+         .then((res) => {
+            console.log(res);
+            console.log("성공");
+         })
+         .catch((err) => {
+            console.log(err);
+         });
       setTodoInput("");
    };
 
