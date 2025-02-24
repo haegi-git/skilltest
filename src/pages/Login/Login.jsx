@@ -43,9 +43,6 @@ export default function Login() {
          [name]: value,
       }));
    };
-
-   console.log(userData);
-
    return (
       <div className="m-auto text-center">
          <form onSubmit={handleLogin}>
