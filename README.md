@@ -1,5 +1,8 @@
 # 기술테스트
 
+<p>npm install</p>
+<p>npm run dev</p>
+
 <strong>25-02-20</strong>
 <p>작업 시작 익숙한 리액트로 화면 구현부터 시작</p>
 <p>로그인(닉네임 설정)</p>
