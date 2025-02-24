@@ -10,13 +10,11 @@ export default function TodoList() {
    const [todoList, setTodoList] = useRecoilState(todoListState);
    const userId = sessionStorage.getItem("userId");
    const user = sessionStorage.getItem("user");
-   console.log(userId, user);
 
    useEffect(() => {
       axios
          .get(`http://localhost:3000/todo/${userId}`)
          .then((res) => {
-            console.log(res);
             setTodoList(res.data);
          })
          .catch((err) => {
@@ -36,7 +34,7 @@ export default function TodoList() {
       <>
          <Search todoList={todoList} />
 
-         <ul className="ml-5 mr-5">
+         <ul className="ml-5 mr-5 max-h-[550px] overflow-auto">
             {todoList.map((item) => {
                return <TodoItem item={item} key={item.id} />;
             })}
